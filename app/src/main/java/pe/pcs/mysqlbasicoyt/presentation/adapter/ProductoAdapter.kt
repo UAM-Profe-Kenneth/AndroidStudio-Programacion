@@ -56,6 +56,12 @@ class ProductoAdapter(
      * to the external instance of the class in which it is contained.As an example, to maintain a
      * reference to the instance of the activity or fragment that uses the adapter
      *
+     * In Android Studio, when you use the View Binding mechanism, each XML layout file in your
+     * project automatically generates a binding class that is based on the name of the XML file.
+     * This binding class facilitates secure and efficient access to the views defined in the XML file.
+     *
+     * The XML file name is used to generate the binding class. The name of the binding class is derived
+     * from the name of the XML file by converting the file name to PascalCase and adding Binding to the end.
      */
 
     inner class ProductoViewHolder(private val binding: ItemsProductoBinding) :
