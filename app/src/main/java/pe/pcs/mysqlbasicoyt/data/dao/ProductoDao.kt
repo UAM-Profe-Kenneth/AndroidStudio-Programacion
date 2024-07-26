@@ -5,20 +5,23 @@ import pe.pcs.mysqlbasicoyt.data.model.ProductoModel
 object ProductoDao {
 
     fun listar(dato: String): List<ProductoModel> {
+        /** This is a list of ProductoModel, which its a list of all products on
+         * the table, stored as objects
+        */
         var lista = mutableListOf<ProductoModel>()
 
-        //concatenar comodines, parametro de ?
+        // ? symbol will be substituted and concatenated
         val ps = MySqlConexion.getConexion().prepareStatement(
             "SELECT id, descripcion, codigobarra, precio FROM producto WHERE descripcion LIKE concat('%',?,'%');"
         )
 
-        // asignamos el parametro
+        // We assign the param dato to ?
         ps.setString(1, dato)
 
-        //result set
+        //rs = result set
         val rs = ps.executeQuery()
 
-        //agregamos el result set a la lista
+        //We add the result set to the lis
         while (rs.next()) {
             lista.add(
                 ProductoModel(

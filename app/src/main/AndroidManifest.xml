@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools" >
-
+    xmlns:tools="http://schemas.android.com/tools">
+    <!--
+    This line declares that the application needs Internet access.
+    It tells the Android operating system that the app requires
+    permission to perform network operations, such as downloading data,
+    sending requests to web servers, or accessing online services.
+    -->
     <uses-permission android:name="android.permission.INTERNET" />
 
     <application
@@ -13,13 +18,16 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.MySqlBasicoYT"
-        tools:targetApi="31" >
+        tools:targetApi="31">
+        <activity
+            android:name=".presentation.ui.EjercicioClase"
+            android:exported="false" />
         <activity
             android:name=".presentation.ui.OperacionProductoActivity"
             android:exported="false" />
         <activity
             android:name=".presentation.ui.MainActivity"
-            android:exported="true" >
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
