@@ -8,6 +8,7 @@ Descubre cómo conectar de manera sencilla tu aplicación Android a una base de 
 - Android Gradle Plugin Version 8.4.0
 - Gradle Version 8.6
 - Kotlin 1.9.22 o superior.
+- MySql Installed and MySql Workbench
 
 ## Base de datos dbDemo en MySql
 
